@@ -1,0 +1,34 @@
+Difference between functional Programming and Object Orient Programming
+
+
+Functions are first class citizens
+
+
+What do first class citizens means?
+
+Consider the following code:
+
+---------------------------------
+Now let's think about the Objects : pass, assign, return value
+---------------------------------
+ 
+Student student = new Student("name", roll-no);
+Here Student is an Object. 
+Point # 1 : I am able to store student object in a variable.
+Point # 2 : I am able to invoke methods of a variable.
+For example: student.getNumberOfMarks();
+
+Point # 3 : We can pass the object as a data to a method.
+For example: System.out.println(student)
+
+--------------------------------------------
+Now let's think about a function or a method : pass, return value, assign
+--------------------------------------------
+Point # 1 : Will I be able to pass a function as a parameter to a method.
+Point # 2 : Will I be able to get a function as a return value from a method
+Point # 3 : Can I assign a function to a variable
+
+This is why functional programming comes into play to solve the above 3 problems.
+
+
+ 
