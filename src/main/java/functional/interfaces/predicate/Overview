@@ -1,0 +1,7 @@
+1. Predicate interface is present in  java.util.Function.Predicate package
+
+2. It is a functional interface
+
+3. contains the following abstract method:  boolean test(T t);
+
+4.  

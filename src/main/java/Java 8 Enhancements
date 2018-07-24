@@ -1,0 +1,17 @@
+Lambda Expressions
+
+Functional Interfaces
+
+Default methods in interfaces
+
+Static methods in interfaces
+
+Predicate / Function / Consumer [Predefined Functional Interfaces]
+
+Method Reference :: Constructor Reference 
+By double colon operator 
+
+Stream API 
+
+Date and Time API (Joda Time) 
+

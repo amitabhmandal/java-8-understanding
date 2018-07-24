@@ -1,0 +1,118 @@
+=========================
+What is Lambda Expression
+=========================
+It is an anonymous function which does not have
+1. Any return type
+2. Any modifiers
+3. Not having any name
+
+======================
+Why do we need it
+======================
+
+=============================
+Rules for Writing Expression:
+=============================
+@@@@@@@@
+Rule #1.
+@@@@@@@@ 
+If the body of the lambda expression contains only one statement then we 
+don't need the parenthesis for the lambda expression
+
+Hence if lambda expression is (int a, int b) -> {System.out.println(a+b);}
+
+Then the parenthesis can be removed to represent
+(int a, int b) -> System.out.println(a+b);
+
+@@@@@@@
+Rule #2.
+@@@@@@@
+Based on the context then the compiler can guess the datatypes of lambda expressions
+which is called type inference
+Hence we can remove the types of the variables
+Thus the lambda expression which is like 
+(int a, int b) -> System.out.println(a+b);
+can now be reduced into 
+(a,  b) -> System.out.println(a+b);
+
+This means what is type inference and how it is implemented within the compiler
+needs to be understood.
+
+@@@@@@@@
+Rule #3.
+@@@@@@@@
+(s) -> return s.length();
+
+Based on situation the compiler can guess we need to return the string type hence
+we can ignore the return keyword.
+
+Hence the optimized lambda expression will become
+(s) -> s.length();
+
+@@@@@@@@
+Rule #4.
+@@@@@@@@
+If the lambda expression is going to take one input value then we can remove the
+parenthesis on the left hand side.
+Hence the following (s) -> return s.length(); lambda expression would reduce into 
+s-> s.length();
+
+@@@@@@@@
+Rule #5.
+@@@@@@@@
+A lambda expression can take any number of parameter
+
+@@@@@@@@
+Rule #6.
+@@@@@@@@
+If multiple parameters present then they need to seperated by comma
+
+@@@@@@@@
+Rule #7.
+@@@@@@@@
+If only one parameter present then the parenthesis is optional.
+(s) -> s.length(); can also be written as
+s -> s.length();
+
+@@@@@@@@
+Rule #8.
+@@@@@@@@
+
+
+
+
+
+
+=============================
+Optimizing Lambda  Expression:
+=============================
+
+
+==========================================================================
+How Lambda Expression can detect the type without specifying the data type:
+==========================================================================
+
+
+
+======================
+What purpose it solves
+======================
+1. To enable functional programming
+2. To enable parallel processing
+3. To make code readible and maintable 
+4. Use API more effectively.
+
+
+====================================================
+What is the disadvantages of using lambda expression
+====================================================
+
+
+================================================
+WHat is the relational of functional programming
+================================================
+
+================================================================
+How do we leverage lambda expression with functional programming
+================================================================
+

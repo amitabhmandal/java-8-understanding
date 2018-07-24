@@ -1,0 +1,22 @@
+Streams of 1.8v related to collections
+
+========================================
+What is the purpose of Java.util.Streams
+========================================
+
+If we want to process the objects from the collections then we should go for streams concept.
+
+If we want to perform some bulk operations on the collections then we should go for Streams 
+operations
+
+=====================================================
+What is the difference between collection and Streams
+=====================================================
+Both seems to be similar but they are different concepts.
+
+Collection: A group of elements as a single entity is called collection.
+
+Streams: If we want to process objects in bulk from the collection then we should go for streams
+
+
+

@@ -1,0 +1,49 @@
+======================================================
+Until 1.7v for interface following are the conclusions
+======================================================
+
+Conclusion #1
+Whether we are declaring or not every method within interface is abstract.
+
+interface Test {
+
+public abstract void m1();
+}
+
+Conclusion #2
+Every variable present within an interface is public static final.
+
+Conclusion #3
+Inside interface we cannot take any concrete methods.
+
+
+======================================================
+From 1.8v for interface following are the conclusions
+======================================================
+
+Conclusion #1 
+We can declare concrete methods also.
+
+What is the need of declaring concrete methods within an interface?
+
+The concrete methods which are allowed within an interface is called default methods
+
+
+How can we declare concrete methods within an interface?
+By using default keyword we can declare a concrete method within an interface
+
+
+interface Test{
+	default void m1(){
+		System.out.println("Default method");
+	}
+}
+//Here default is a keyword and not a modifier.
+If the implementation class wants to over-ride then it can over-ride or if it wants
+to use then it can use the same method.
+
+
+
+
+
+

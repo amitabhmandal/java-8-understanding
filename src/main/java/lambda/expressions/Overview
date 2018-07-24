@@ -1,0 +1,54 @@
+Lambda:
+1. To enable functional Programming
+2. Write more readable, maintainable and concise code
+3. To use API's more effectively.
+4. To enable parallel processing
+
+=========================================================================
+What is Lambda Expression: It is anonymous function. ie nameless function 
+=========================================================================
+1. It does not having name
+2. It does not have any modifiers.
+3. It does not have a return type.
+
+
+=========================================================================
+Properties of Lambda Expression:  
+=========================================================================
+1. A lamdba expression can have any number of input arguments.
+Example 
+() -> System.out.println("Hello);
+(s) -> s.length();
+(a, b) -> System.out.println(a+b);
+
+2. If multiple parameters present then these parameters should be
+seperated be , 
+example 
+(a,b) -> System.out.println(a + b);
+
+3. If one parameter present then we can get rid of the parenthesis
+example 
+s -> s.length();
+
+4. Usually we can specify the types in the input arguments however the compiler can
+detect the type based on the type hence 
+(a, b) -> system.out.println(a+b); thus we dont need to specify the types in the input 
+parameter list
+
+5. Similar to normal methods lambda expression can have multiple statements however
+if they have multiple statements then it should be enclosed within curly braces
+() -> {
+	statement-1;
+	statement-2;
+	statement-3;
+	}		
+
+
+=============================================================
+How to call Lambda Expression: By using Functional Interfaces  
+=============================================================
+
+We can call lambda expressions by using functional interfaces.
+
+Once we write lambda expression we use functional interfaces to invoke it.
+

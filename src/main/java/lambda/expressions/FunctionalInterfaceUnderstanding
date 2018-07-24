@@ -1,0 +1,105 @@
+Examples of Functional Interface
+Runnable contains only run method
+Callable contains only call method
+ActionListener contains only actionPerformed()
+Comparable contains only compareTo method
+
+What is functional Interface?
+If the interface contains only 'one' abstract method then it is called functional interface.
+                               =====================
+                               
+It is also called SAM = SINGLE ABSTRACT METHOD!
+
+We can use functional interface to invoke lambda expression
+
+====================================================
+What is the advantage of Using @FunctionalInterface.
+====================================================
+If we are doing any mistake then compiler will be able to catch it.
+
+A functional interface can contain any number of default methods and any number of static methods
+however only one abstract method. If there are no abstract method then it would be a violation
+of @FunctionalInterface contract hence it would be a compilation error.
+
+================================================
+Functional Interface with respect to Inheritance
+================================================
+
+******
+CASE 1:
+******  
+If an interface extends functional interface and child interface does not contain
+any abstract method then the child interface is always functional interface.
+
+@FunctionalInterface
+interface Parent{
+	public void parentMethod();
+}
+
+@FunctionalInterface
+interface Child{
+}
+
+*******
+CASE 2:
+******* 
+In the child interface we can define exactly same parent interface abstract method
+
+@FunctionalInterface
+interface Parent{
+	public void parentMethod();
+}
+
+@FunctionalInterface
+interface Child{
+	public void parentMethod();
+}
+
+Thus in the child we can define exactly one abstract method which is some sort of over-riding
+
+
+*******
+CASE 3:
+*******                               
+In the child interface we can't define a new abstract method as we will get compile time 
+error
+
+@FunctionalInterface
+interface Parent{
+	public void parentMethod();
+}
+
+@FunctionalInterface
+interface Child{
+	public void childMethod();
+}
+
+The following code will result in compilation error. 
+hence declaring a new abstract method in child is not allowed.
+
+
+*******
+CASE 4:
+*******                               
+In the child interface we are declaring a new abstract method which is valid because
+we did not declare the child as a @FunctionalInterface hence the code shall compile fine
+
+@FunctionalInterface
+interface Parent{
+	public void parentMethod();
+}
+
+interface Child{
+	public void childMethod();
+}
+
+
+THE ABOVE CODE IS VALID
+
+====================================================
+What is the advantage of adding @FunctionalInterface
+====================================================
+If any other person by accident adds another abstract method then all 
+the existing lambda functions will stop working. Hence 
+@FunctionalInterface came into existence which prevents adding more abstract methods.
+

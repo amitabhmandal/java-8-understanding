@@ -1,0 +1,30 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Anonymous Inner Class Vs Lambda Expression
+------------------------------------------
+
+Inner classes without name is called Anonymous Inner Class.
+Where-ever we are using anonymous Inner classes we can almost use Lambda Expression
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+When inner class is not used as Lambda Expression
+-------------------------------------------------
+
+Only some Anonymous inner classes can be replaced with Lambda Expression
+
+Anonymous Inner Class can 
+1. can extend Concrete Class.
+2. can extend Abstract Class
+3. Can implement an interface with multiple methods
+4. Can implement an interface with single method.
+
+A Lambda expression cannot extend a concrete class
+A lambda expression cannot extend an abstract class
+A lambda expression cannot implement an interface which contain multiple abstract methods
+A lambda expression can be used when an interface contains a single abstract method.
+
+Thus an Anonymous inner class is more powerful/advantageous than an Lambda Expression
+
+Thus Lambda Expression can never be equal to Anonymous Inner Classes.
+
+
+
