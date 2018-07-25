@@ -13,10 +13,50 @@ Only some Anonymous inner classes can be replaced with Lambda Expression
 
 Anonymous Inner Class can 
 1. can extend Concrete Class.
-2. can extend Abstract Class
-3. Can implement an interface with multiple methods
-4. Can implement an interface with single method.
+Example: 
+class Test {
+}
 
+Test t = new Test(){
+};
+
+
+
+2. can extend Abstract Class
+Example: 
+abstract class Test {
+}
+
+Test t = new Test(){
+};
+
+
+3. Can implement an interface with multiple methods
+Example: 
+interface Test {
+m1();
+m2();
+m3();
+}
+
+Test t = new Test(){
+m1(){}
+
+m2(){}
+
+m3(){}
+}
+4. Can implement an interface with single method.
+Example: 
+interface Test {
+m1();
+}
+
+Test t = new Test(){
+m1(){}
+}
+
+================================================
 A Lambda expression cannot extend a concrete class
 A lambda expression cannot extend an abstract class
 A lambda expression cannot implement an interface which contain multiple abstract methods
@@ -25,6 +65,72 @@ A lambda expression can be used when an interface contains a single abstract met
 Thus an Anonymous inner class is more powerful/advantageous than an Lambda Expression
 
 Thus Lambda Expression can never be equal to Anonymous Inner Classes.
+
+Whereever there is anonymous inner class we may be able to replace it with lambda expression
+
+********************************************************************************
+MORE COMPLICATED DIFFERENCES BETWEEN ANONYMOUS INNER CLASS AND LAMBDA EXPRESSION
+********************************************************************************
+--------------
+Difference #1
+--------------
+Within anonymous inner class we can declare instance variables.
+
+Within Lambda expression we cannot declare any instance variables, however we can declare local variables. 
+So any variables declared within lambda expression acts as local variables.
+Within lambda expression this always refers to the outer class object instance members.
+
+--------------
+Difference #2
+--------------
+Anonymous Inner class can be instantiated
+Lambda expressions cannot be instantiated
+
+--------------
+Difference #3
+--------------
+Within anonymous inner class this always refers to the current instance within the anonymous inner class instance members
+Within Lambda expression this always refers to the outer class members
+
+--------------
+Difference #4
+--------------
+For the anonymous inner class at the time of the compilation a seperate .class file will be generated
+For the lambda expression at the time of compilation no seperate .class file will be generated
+
+--------------
+Difference #5
+--------------
+Anonymous inner class is best suited when we want to handle multiple methods
+Lambda expression is best suited when we have only method to be implememted
+
+--------------
+Difference #6
+--------------
+Anonymous inner class is a class without name
+Lambda expression is a method without name
+
+--------------
+Difference #7
+--------------
+Anonymous Inner class extend a class and implement an interface containing one or more methods
+Lambda expression cannot extend a class and can only implement an interface containing a single abstract method
+
+--------------
+Difference #8
+--------------
+Anonymous inner class will be created on demand and stored in the heap area.
+Lambda expression is stored in the permanent area of JVM(Method Area).
+
+
+
+
+
+
+
+
+
+
 
 
 

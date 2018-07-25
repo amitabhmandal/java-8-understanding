@@ -1,0 +1,127 @@
+==================================
+Functional Interface Functionality
+==================================
+Once I have written the lambda expression then we can have to call the expression 
+based on our requirement.
+
+=============
+What it Means
+=============
+
+Runnable Interface [contains only one method - run]
+Callable Interface [contains only one method = call()]
+Comparable Interface [contains only one method = compareTo()]
+ActionListener [contains only one method = action()]
+
+Interface are examples of Functional Interface
+
+
+							   VVVVVVVVVVVVVVVVVVV
+If the interface contains only one abstract method then it is called functional interface.
+							   ^^^^^^^^^^^^^^^^^^^
+
+Within Functional Interface we can take only one abstract method.
+
+The restriction is only abstract method.
+
+Within functional interfaces we can take any number of default methods
+Within functional interfaces we can take any number of static methods
+
+Every method present within an interface is public and abstract.
+
+Following example is not a functional interface
+interface NotFunctionalInterfaceExample {
+	public void m1();
+	public void m2();
+}
+
+It has two abstract methods m1 and m2 hence not a functional interface.
+
+The following will also result in compilation error
+
+@FunctionalInterface
+interface Example {
+}
+
+//This code will not compile as it is not containing a single abstract method.
+
+======================================================================================
+Why functional interface should have only one abstract method?
+If Interface has more then one abstract method, why is this not a Functional Interface
+======================================================================================
+If more than one abstract method exists in interfaces annotated with 
+@FunctionalInterface then it will lead to compilation error.
+
+================================
+Functional Interface Inheritance
+================================
+
+++++++
+CASE 1:  VALID AND NO COMPILATION ERROR
+++++++
+If an interface extends functional interface and child interface does not contain 
+any abstract method then the child interface is always functional interface.
+
+Example
+@FunctionalInterface
+interface Parent {
+	parentMethod();
+}
+
+@FunctionalInterface
+interface  child extends Parent {
+}
+
+
+++++++
+CASE 2: VALID AND NO COMPILATION ERROR
+++++++
+If an interface extends functional interface and child interface contains 
+abstract method then the child interface is always functional interface.
+So in the child we are over-riding the parent interface method.
+
+Example
+@FunctionalInterface
+interface Parent {
+	parentMethod();
+}
+
+@FunctionalInterface
+interface  child extends Parent {
+	parentMethod();
+}
+
+++++++
+CASE 3: COMPILATION ERROR
+++++++
+Since in this the child has two abstract method hence it will lead to compilation error
+
+Example
+@FunctionalInterface
+interface Parent {
+	parentMethod();
+}
+
+@FunctionalInterface
+interface  child extends Parent {
+	childMethod();
+}
+
+
+++++++
+CASE 4: Valid since child interface has not been annotated with @FunctionalInterface 
+++++++
+
+
+Example
+@FunctionalInterface
+interface Parent {
+	parentMethod();
+}
+
+interface  child extends Parent {
+	childMethod();
+}
+
+
+
