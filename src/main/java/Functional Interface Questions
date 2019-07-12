@@ -4,6 +4,24 @@ Functional Interface Functionality
 Once I have written the lambda expression then we can have to call the expression 
 based on our requirement.
 
+================================================================
+What is is a functional interface: It represents a single method
+================================================================
+It represents an interface
+with one abstract method
+methods of object do not count
+maybe annotated with @FunctionalInterface
+
+How it links with Lambda Expression:
+A lambda expression always represents the idea of a function or anonymous function
+Whenever we need to write a lambda expression then that expression represents the implementation 
+of the single method which exists within an interface.
+
+An interface in java can become a functional interface which does not need to be recompiled with Java 8
+if it has a single method. For example the Runnable interface which has a single method run().
+
+
+
 =============
 What it Means
 =============

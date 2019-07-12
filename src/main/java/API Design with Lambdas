@@ -1,0 +1,9 @@
+Chaining lambdas with default methods
+- consumer interface
+- predicate interface
+
+composing lambdas 
+- comparator interface
+
+Partial Application
+- currency convertor example
